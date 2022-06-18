@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is the title of the webpage!</title>
+  </head>
+  <body>
+    <p>???????</p>
+
+    <button id="addCounterBtn">Click Me</button>
+    <span id="counter">19</span>
+
+    <script>
+      function incrementCounter() {
+        const node = document.getElementById("counter")
+        const counterValue = parseInt(node.innerText) + 1
+        node.innerText = counterValue
+      }
+
+      function changeColorToGreen() {
+        const node = document.getElementById("counter")
+        node.style.color = "#00ff00"
+      }
+
+      const btnNode = document.getElementById("addCounterBtn")
+      btnNode.onclick = function () {
+        incrementCounter()
+        changeColorToGreen()
+      }
+    </script>
+  </body>
+</html>
